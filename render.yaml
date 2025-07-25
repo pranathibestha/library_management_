@@ -1,0 +1,9 @@
+services:
+    type: web
+    name: library-management
+    env: python
+    buildCommand: ""
+    startCommand: "gunicorn app:app"
+    envVars:
+        key: DATABASE_URL
+        value: mysql+pymysql://username:password@host:3306/database_name

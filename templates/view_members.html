@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>All Members</h2>
+<table class="table table-bordered">
+  <thead class="table-dark"><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th></tr></thead>
+  <tbody>{% for m in members %}<tr><td>{{ m.id }}</td><td>{{ m.name }}</td><td>{{ m.email }}</td><td>{{ m.phone }}</td></tr>{% endfor %}</tbody>
+</table>
+{% endblock %}
