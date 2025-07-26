@@ -1,8 +1,37 @@
 {% extends 'base.html' %}
 {% block content %}
 <h2>Issued Books</h2>
+
+<div class="mb-3">
+  
+
+  <a href="{{ url_for('index') }}" class="btn btn-info">Go to Home Page</a><br>
+<a href="{{ url_for('dashboard') }}" class="btn btn-primary me-2">Go to Dashboard</a>
+
+</div>
+
 <table class="table table-striped">
-  <thead class="table-dark"><tr><th>ID</th><th>Title</th><th>Member</th><th>Issue Date</th><th>Action</th></tr></thead>
-  <tbody>{% for r in records %}<tr><td>{{ r[0] }}</td><td>{{ r[1] }}</td><td>{{ r[2] }}</td><td>{{ r[3] }}</td><td><a href="/return-book/{{ r[0] }}" class="btn btn-warning btn-sm">Return</a></td></tr>{% endfor %}</tbody>
+  <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Member</th>
+      <th>Issue Date</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for r in records %}
+    <tr>
+      <td>{{ r[0] }}</td>
+      <td>{{ r[1] }}</td>
+      <td>{{ r[2] }}</td>
+      <td>{{ r[3] }}</td>
+      <td>
+        <a href="/return-book/{{ r[0] }}" class="btn btn-warning btn-sm">Return</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
 </table>
 {% endblock %}

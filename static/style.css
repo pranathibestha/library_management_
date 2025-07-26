@@ -28,8 +28,8 @@ h2 {
   transition: 0.3s ease;
 }
 
-.btn-primary { background-color: #1e3c72; border: none; }
-.btn-primary:hover { background-color: #2a5298; }
+.btn-primary { background-color: #f2f3f5; border: none; }
+.btn-primary:hover { background-color: #e6cdcd; }
 
 .btn-success { background-color: #28a745; border: none; }
 .btn-success:hover { background-color: #218838; }
@@ -61,7 +61,7 @@ h2 {
 }
 
 .list-group-item a {
-  color: #1e3c72;
+  color: #a0aec9;
   text-decoration: none;
 }
 

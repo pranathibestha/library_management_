@@ -1,8 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
 <h2>All Books</h2>
+
+<a href="{{ url_for('dashboard') }}" class="btn btn-primary mb-3">Go to Dashboard</a>
+
 <table class="table table-bordered">
-  <thead class="table-dark"><tr><th>ID</th><th>Title</th><th>Author</th><th>Status</th></tr></thead>
-  <tbody>{% for b in books %}<tr><td>{{ b.id }}</td><td>{{ b.title }}</td><td>{{ b.author }}</td><td>{{ b.status }}</td></tr>{% endfor %}</tbody>
+  <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for b in books %}
+    <tr>
+      <td>{{ b.id }}</td>
+      <td>{{ b.title }}</td>
+      <td>{{ b.author }}</td>
+      <td>{{ b.status }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
 </table>
 {% endblock %}
