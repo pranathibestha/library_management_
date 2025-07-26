@@ -1,6 +1,6 @@
 services:
     type: web
-    name: library-management
+    name: library-management_
     env: python
     buildCommand: ""
     startCommand: "gunicorn app:app"
